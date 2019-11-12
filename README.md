@@ -10,7 +10,7 @@ echo """def handle(req):
     print('Hello! You said: ' + req)""" > hello-python/handler.py
 mv hello-python.yml stack.yml
 
-git add hello-python/handler.py hello-python/requirements.txt stack.yml
+git add hello-python stack.yml
 git commit -m "ofc test"
 git push
 
