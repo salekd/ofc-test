@@ -10,10 +10,14 @@ echo """def handle(req):
     print('Hello! You said: ' + req)""" > hello-python/handler.py
 mv hello-python.yml stack.yml
 
+#faas-cli deploy -g $OPENFAAS_URL
+
 git add hello-python stack.yml
 git commit -m "ofc test"
 git push
+```
 
+```
 kubectl logs -f deploy/github-event -n openfaas-fn
 kubectl logs -f deploy/github-push -n openfaas-fn
 kubectl logs -f deploy/git-tar -n openfaas-fn
