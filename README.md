@@ -16,6 +16,7 @@ git push
 ```
 
 ```
+kubectl logs -f deploy/github-event -n openfaas-fn
 kubectl logs -f deploy/github-push -n openfaas-fn
 kubectl logs -f deploy/git-tar -n openfaas-fn
 kubectl logs -f deploy/buildshiprun -n openfaas-fn
