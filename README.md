@@ -15,7 +15,20 @@ mv hello-python.yml stack.yml
 git add hello-python stack.yml
 git commit -m "ofc test"
 git push
+```
 
+`$HOME/.gitconfig`
+
+```
+[alias]
+  yolo = !git add -A && git commit -am \"$(curl -s http://whatthecommit.com/index.txt)\" && git push -f origin master
+```
+
+```
+git yolo
+```
+
+```
 kubectl logs -f deploy/github-event -n openfaas-fn
 kubectl logs -f deploy/github-push -n openfaas-fn
 kubectl logs -f deploy/git-tar -n openfaas-fn
