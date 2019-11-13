@@ -25,6 +25,7 @@ git push
 ```
 
 ```
+curl -s http://whatthecommit.com/index.txt > yolo.txt
 git yolo
 ```
 
