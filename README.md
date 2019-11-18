@@ -35,3 +35,9 @@ kubectl logs -f deploy/git-tar -n openfaas-fn
 kubectl logs -f deploy/buildshiprun -n openfaas-fn
 kubectl get events --sort-by=.metadata.creationTimestamp -n openfaas-fn
 ```
+
+```
+export OPENFAAS_URL=https://gateway.iot-dev.sda-dev-projects.nl
+
+curl $OPENFAAS_URL/function/salekd-hello-python -d "$(cowsay -s hello)"
+```
